@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XFu-cw-cgj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Merger-->
+        <scene sceneID="ql8-oH-cs6">
+            <objects>
+                <viewController id="DcO-eZ-DVI" customClass="MergerViewController" customModule="VideoEditing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E2A-Kj-5R6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htA-Mp-bch">
+                                <rect key="frame" x="116" y="268.5" width="144" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wpU-tG-WfG"/>
+                                </constraints>
+                                <state key="normal" title="Merge Video &amp; audio"/>
+                                <connections>
+                                    <action selector="mergeAndPlay:" destination="DcO-eZ-DVI" eventType="touchUpInside" id="R79-tE-hff"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3V-Qn-B4J">
+                                <rect key="frame" x="165" y="368.5" width="46" height="30"/>
+                                <state key="normal" title="Export"/>
+                                <connections>
+                                    <action selector="saveToLibrary:" destination="DcO-eZ-DVI" eventType="touchUpInside" id="LDr-l0-ZYw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="htA-Mp-bch" firstAttribute="centerY" secondItem="E2A-Kj-5R6" secondAttribute="centerY" constant="-50" id="8EP-Au-zdR"/>
+                            <constraint firstItem="R3V-Qn-B4J" firstAttribute="centerY" secondItem="E2A-Kj-5R6" secondAttribute="centerY" constant="50" id="CIg-7z-Cgn"/>
+                            <constraint firstItem="R3V-Qn-B4J" firstAttribute="centerX" secondItem="E2A-Kj-5R6" secondAttribute="centerX" id="s8Z-Ue-nVB"/>
+                            <constraint firstItem="htA-Mp-bch" firstAttribute="centerX" secondItem="E2A-Kj-5R6" secondAttribute="centerX" id="uae-vn-n3B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="29T-uK-1KP"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Merger" id="P0l-cj-PZj"/>
+                    <connections>
+                        <outlet property="exportButton" destination="R3V-Qn-B4J" id="6b6-yg-cPI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAw-5J-7EI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708" y="100.29985007496252"/>
+        </scene>
+        <!--Extractor-->
+        <scene sceneID="cdd-bl-gwV">
+            <objects>
+                <viewController id="wQo-gS-AsN" customClass="ExtractViewController" customModule="VideoEditing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Odh-rK-tLa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vL-7W-zwh">
+                                <rect key="frame" x="118.5" y="388.5" width="139" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LEP-4T-rWN"/>
+                                </constraints>
+                                <state key="normal" title="Extract Audio &amp; Play"/>
+                                <connections>
+                                    <action selector="extractAudioAndPlay:" destination="wQo-gS-AsN" eventType="touchUpInside" id="pNj-Bz-4nC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwc-0Z-B3U">
+                                <rect key="frame" x="118.5" y="318.5" width="139" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8z9-KT-UF1"/>
+                                </constraints>
+                                <state key="normal" title="Extract Video &amp; Play"/>
+                                <connections>
+                                    <action selector="extractVideoAndPlay:" destination="wQo-gS-AsN" eventType="touchUpInside" id="5eM-1d-mHL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1V-QO-ltx">
+                                <rect key="frame" x="123" y="248.5" width="129" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jfm-EM-cwo"/>
+                                </constraints>
+                                <state key="normal" title="Play Original Video"/>
+                                <connections>
+                                    <action selector="playOriginalVideo:" destination="wQo-gS-AsN" eventType="touchUpInside" id="0Yv-Zv-Jl2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tno-QI-iZx">
+                                <rect key="frame" x="123" y="178.5" width="129" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1zm-dH-jXV"/>
+                                </constraints>
+                                <state key="normal" title="Import from library"/>
+                                <connections>
+                                    <action selector="openLibrary:" destination="wQo-gS-AsN" eventType="touchUpInside" id="oHV-rA-x31"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9vL-7W-zwh" firstAttribute="centerX" secondItem="Odh-rK-tLa" secondAttribute="centerX" id="1Nf-Mk-Oul"/>
+                            <constraint firstItem="A1V-QO-ltx" firstAttribute="centerY" secondItem="Odh-rK-tLa" secondAttribute="centerY" constant="-70" id="373-uu-KvH"/>
+                            <constraint firstItem="fwc-0Z-B3U" firstAttribute="centerX" secondItem="Odh-rK-tLa" secondAttribute="centerX" id="6ht-VY-sJA"/>
+                            <constraint firstItem="A1V-QO-ltx" firstAttribute="top" secondItem="Tno-QI-iZx" secondAttribute="bottom" constant="40" id="87R-3Z-gf4"/>
+                            <constraint firstItem="Tno-QI-iZx" firstAttribute="centerX" secondItem="Odh-rK-tLa" secondAttribute="centerX" id="Q0X-SD-y5M"/>
+                            <constraint firstItem="9vL-7W-zwh" firstAttribute="centerY" secondItem="Odh-rK-tLa" secondAttribute="centerY" constant="70" id="RY0-Uh-ynG"/>
+                            <constraint firstItem="A1V-QO-ltx" firstAttribute="centerX" secondItem="Odh-rK-tLa" secondAttribute="centerX" id="W8f-u3-LMR"/>
+                            <constraint firstItem="fwc-0Z-B3U" firstAttribute="centerY" secondItem="Odh-rK-tLa" secondAttribute="centerY" id="n6y-JI-9Nl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EwR-c7-qlo"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Extractor" id="TxS-l0-mwU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ko3-sP-gx0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708" y="-636.4317841079461"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="CWk-xM-aq9">
+            <objects>
+                <tabBarController id="XFu-cw-cgj" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sSB-Qh-2dm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="lgB-NA-tSG" kind="relationship" relationship="viewControllers" id="zj3-1a-QYu"/>
+                        <segue destination="UzR-Zy-xlT" kind="relationship" relationship="viewControllers" id="YNg-Rt-uUy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9FL-vM-pJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226" y="-266"/>
+        </scene>
+        <!--Extract-->
+        <scene sceneID="Z6p-c1-8sp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lgB-NA-tSG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Extract" id="7HY-mb-UNY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PGa-pq-WfJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wQo-gS-AsN" kind="relationship" relationship="rootViewController" id="582-xD-lOD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GLU-wE-1yD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.60000000000002" y="-636.4317841079461"/>
+        </scene>
+        <!--Merge-->
+        <scene sceneID="RcP-5d-K0f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UzR-Zy-xlT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Merge" id="trP-bs-825"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wMr-pF-uOq">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DcO-eZ-DVI" kind="relationship" relationship="rootViewController" id="I5h-Kk-ZrF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8MP-Sy-YMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="102"/>
+        </scene>
+    </scenes>
+</document>
